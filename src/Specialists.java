@@ -16,7 +16,7 @@ public class Specialists extends HealthProfessional {
     public void printDetails(){
         System.out.println("Specialist Doctor details: ");
         super.printDetails();
-        System.out.println("Feild of :" + Field);
+        System.out.println("Field of :" + Field);
     }
 }
 
