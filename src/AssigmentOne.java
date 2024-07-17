@@ -56,7 +56,7 @@ public class AssigmentOne {
         appointment.add(appointment);
     }
 //creating appointments
-    public static void PrintExistingAppointments(){
+    public static void PrintExistingAppointments(ArrayList<Appointment> appointment){
         if (appointment.isEmpty()){
         System.out.println("No Appointments");
         return;
