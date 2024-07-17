@@ -1,4 +1,9 @@
+
+import java.until.ArrayList;
+
 public class AssigmentOne {
+    private static ArrayList<Appoinment> appointment = new ArrayList<>();
+
     public static void main (String[] args)
     {
 // Part 3: creating objects for both the classes we made.
@@ -26,5 +31,55 @@ public class AssigmentOne {
         Sytem.out.println("__________");
         specialist2.printDetails();
         Sytem.out.println("__________");
+
+//Part 5- appoinments
+        CreateAppointment("Alice joe", 1234567890, "12:22", new GeneralPractitioner(1, "Awais Malangi", "General Practitioner", "Airport West"));
+        CreateAppointment("Sean De", 121212456, "08:00", new Specialist(2, "Noori Iqbal", "Skin Specialist", "Dermatologist"));
+
+        System.out.println("Existing appoinments;");
+        PrintExistingAppointments();
+        Sytem.out.println("__________");
+
+        CancelBooking(1234567890);
+
+        System.out.println("Upfate appoinments: ");
+        PrintExistingAppointments();
+        Sytem.out.println("__________");
+    }
+
+    public static void CreateAppointment(String patientName, int mobileNumber, String timeSlot, HealthProfessional doctor){
+        if (patientName == null || mobileNumber == null || timeSlot == null || doctor == null){
+            System.out.println("Error 404, All Details must be provided");
+            return;
+        }
+        Appointment appointment = new Appointment(patientName, mobileNumber, timeSlot, doctor);
+        appointment.add(appointment);
+    }
+//creating appointments
+    public static void PrintExistingAppointments(){
+        if (appointment.isEmpty()){
+        System.out.println("No Appointments");
+        return;
+        }
+        for (Appointment appointment : appointments){
+            appointment.printDetails();
+            System.out.println("__________");
+        }
+    }
+//cancel by mobile Number
+public static void CancelBooking (int mobileNumber){
+        Appointment appointmentToRemove = null;
+        for (Appointment appointment : appointment){
+            if (appointment,getMobileNumber().equals(mobileNumber)){
+                appointmentToRemove = appointment;
+                break;
+            }
+        }
+        if (appointmentToRemove != null){
+            appointment.remove(appointmentToRemove);
+            System.out.println("Appointment for Mobile Number" + mobileNumber + is now removed);
+        } else {
+            System.out.println ("No appointment exist for this Mobile Number" + mobileNumber);
+        }
     }
 }
