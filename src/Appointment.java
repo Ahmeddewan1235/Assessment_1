@@ -24,6 +24,9 @@ public class Appointment {
         this.timeSlot = TimeSlot;
         this.doctor = dpctor;
     }
+    public int getMobileNumber() {
+        return patientMobile;
+    }
 
     public void printDetails(){
         System.out.println("Patient Name is: " + patientName);
@@ -32,5 +35,4 @@ public class Appointment {
         System.out.println("Doctor: " + );
         doctor.printDetails();
     }
-
 }
