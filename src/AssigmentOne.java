@@ -2,15 +2,15 @@
 import java.until.ArrayList;
 
 public class AssigmentOne {
-    private static ArrayList<Appoinment> appointment = new ArrayList<>();
+    private static ArrayList<Appointment> appointment = new ArrayList<>();
 
     public static void main (String[] args)
     {
 // Part 3: creating objects for both the classes we made.
         // 3 objects for GP
         GeneralPractitioner gp1 = new GeneralPractitioner (1, "Awais Malangi", "General Practitioner", "Airport West");
-        GeneralPractitinore gp2 = new GeneralPractitioner (2, "Abdullah Ampol", "General Practitioner", "Kew Hospital");
-        GeneralPractitinore gp3 = new GeneralPractitinore (3, "Jalal Raami", "General Practitinore", "Diamond Creek");
+        GeneralPractitioner gp2 = new GeneralPractitioner (2, "Abdullah Ampol", "General Practitioner", "Kew Hospital");
+        GeneralPractitioner gp3 = new GeneralPractitioner (3, "Jalal Raami", "General Practitinore", "Diamond Creek");
 
         // 2 objects for Specialists
         Specialist specialist1 = new Specialist (1, "Amirah David", "Heart Specialist", "Cardiologist");
@@ -19,18 +19,18 @@ public class AssigmentOne {
         //Print for GP in Main Class
         System.out.println ("Genral Practitioners are: ");
         gp1.printDetails();
-        Sytem.out.println("__________");
+        System.out.println("__________");
         gp2.printDetails();
-        Sytem.out.println("__________");
+        System.out.println("__________");
         gp3.printDetails();
-        Sytem.out.println("__________");
+        System.out.println("__________");
 
         //Print for Specialists in Mian Class
         System.out.println ("Specialists are: ");
         specialist1.printDetails();
-        Sytem.out.println("__________");
+        System.out.println("__________");
         specialist2.printDetails();
-        Sytem.out.println("__________");
+        System.out.println("__________");
 
 //Part 5- appoinments
         CreateAppointment("Alice joe", 1234567890, "12:22", new GeneralPractitioner(1, "Awais Malangi", "General Practitioner", "Airport West"));
@@ -38,13 +38,13 @@ public class AssigmentOne {
 
         System.out.println("Existing appoinments;");
         PrintExistingAppointments();
-        Sytem.out.println("__________");
+        System.out.println("__________");
 
         CancelBooking(1234567890);
 
         System.out.println("Upfate appoinments: ");
         PrintExistingAppointments();
-        Sytem.out.println("__________");
+        System.out.println("__________");
     }
 
     public static void CreateAppointment(String patientName, int mobileNumber, String timeSlot, HealthProfessional doctor){
@@ -77,7 +77,7 @@ public static void CancelBooking (int mobileNumber){
         }
         if (appointmentToRemove != null){
             appointment.remove(appointmentToRemove);
-            System.out.println("Appointment for Mobile Number" + mobileNumber + is now removed);
+            System.out.println("Appointment for Mobile Number" + mobileNumber + "is now removed");
         } else {
             System.out.println ("No appointment exist for this Mobile Number" + mobileNumber);
         }
